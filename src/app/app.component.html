@@ -1,0 +1,23 @@
+<mat-sidenav-container class="sidenavContainer" >
+  <mat-sidenav-content class="main-page">
+    <div class="menuBtn ptr" (click)="isOpen = isOpen? false:true">
+      <i class="bi bi-list" *ngIf="!isOpen"></i>
+      <i class="bi bi-x" *ngIf="isOpen"></i>
+    </div>
+      <div class="contextContainer">
+        <router-outlet></router-outlet>
+      </div>
+  </mat-sidenav-content>
+  <mat-sidenav
+    #sidenav
+    autosize="true"
+    mode="side"
+    position="start"
+    [(opened)]="isOpen"
+    (closed)="navClosed()"
+    class="sidenav"
+  >
+  <app-sidebar></app-sidebar>
+  </mat-sidenav>
+</mat-sidenav-container>
+

@@ -1,0 +1,48 @@
+mat-slider {
+    width: 100%;
+  }
+
+  ::ng-deep .mat-accent .mat-slider-thumb {
+    background-color: var(--primary-blue);
+} 
+::ng-deep .mat-accent .mat-slider-thumb-label {
+    background-color: var(--primary-blue);
+} 
+::ng-deep .mat-accent .mat-slider-track-fill {
+    background-color: var(--primary-blue);
+} 
+::ng-deep .mat-accent .mat-slider-thumb-label-text {
+    font-size: 2rem;
+} 
+.emojiContainer{
+  display: flex;
+  justify-content: center;
+}
+.emojiContainer .emoji{
+  display: flex;
+  justify-content: center;
+  font-size: 6rem;
+  background: var(--primary-blue);
+  width: fit-content;
+}
+.emojiContainer-small .emoji{
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.overallText{
+  font-size: 2.5rem;
+  font-family: 'Porcelain';
+  font-weight: 500;
+}
+
+.sliderContainer{
+  position: relative;
+}
+
+.sliderContainer .centerline{
+  position: absolute;
+  top: 10px;
+  left: 49.9%;
+}

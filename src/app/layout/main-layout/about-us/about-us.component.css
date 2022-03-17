@@ -1,0 +1,84 @@
+
+
+/* *{
+} */
+
+.main-page{
+  padding: 1rem 2rem;
+  background-color: rgba(248, 249, 250, 1);
+  height: 100vh;
+}
+
+.banner{
+  width: 100%;
+}
+
+.banner .header{
+  top:0;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.aligns{
+  display: inline-block;
+}
+
+.banner .header .text1{
+  color: gray;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.banner .header .text2{
+  font-size: 14px;
+  float: right;
+
+}
+
+.banner .header .text2 .righty{
+  margin: 0 1rem;
+  display: inline-block;
+}
+
+input{
+  border-radius: 12px;
+}
+
+.banner .header .text2 .righty p{
+  margin: 0;
+  color: gray;
+  cursor: pointer;
+}
+
+.content{
+  width: 100%;
+  margin-top: 3rem;
+  padding: 1rem 2.5rem;
+  background: white;
+  border-radius: 15px;
+}
+
+.content .aboutus-container{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.content .aboutus-container .section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content .aboutus-container .section:nth-child(even) {
+   flex-direction: row-reverse;
+  }
+
+
+.content .aboutus-container .section p{
+    font-size: 0.9rem;
+    width: 70%;
+}
+.content .aboutus-container .section img{
+    width: 20%;
+}

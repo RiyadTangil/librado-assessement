@@ -1,0 +1,75 @@
+<app-header [title]="'Welcome'"></app-header>
+<div class="row p-3 my-3">
+  <div class="col-md-6 col-sm-12 px-2">
+    <p>
+      Your employee experience is a vital to shaping organizational culture and
+      performance - today and in the future!
+      <br />
+      <br />
+      This process will enable you to anonymously provide your insight to
+      help strengthen those areas that are enabling you and identity and prepare
+      for changes to grow in the future.
+      <br />
+      <br />
+      Your customers are counting on you to be the best you can be!
+      <br />
+      <br />
+      Please take the next few minutes to provide your honest input. The data
+      will be compiled and reported on in such a way that individual responses
+      will not be identifiable.
+      <br />
+    </p>
+  </div>
+  <div class="col-md-6 col-sm-12 px-2">
+    <div class="px-2">
+      <div class="form-group">
+        <label for="email">Industry</label>
+        <select class="form-control" [(ngModel)]="assmentInfo['industry']">
+          <option selected value="construction">Construction</option>
+          <option selected value="education">Education</option>
+          <option selected value="healthcare">Healthcare</option>
+          <option selected value="financial">Financial</option>
+          <option selected value="technology">Technology</option>
+          <option selected value="manufacturing">Manufacturing</option>
+          <option selected value="transport">Transport</option>
+          <option selected value="oil and gas">Oil & Gas</option>
+          <option selected value="hospitality">Hospitality</option>
+          <option selected value="energy">Energy</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="email">Primary Work Location</label>
+        <select class="form-control" [(ngModel)]="assmentInfo['workLocation']">
+          <option selected>Remote</option>
+          <option value="1">One Location</option>
+          <option value="2">Two Location</option>
+          <option value="3">Three Location</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="email">Department</label>
+        <select class="form-control" [(ngModel)]="assmentInfo['department']">
+          <option selected>Remote</option>
+          <option value="1">One Location</option>
+          <option value="2">Two Location</option>
+          <option value="3">Three Location</option>
+        </select>
+      </div>
+   
+    
+      <div class="form-group">
+        <label for="email">Role in organization</label>
+        <select class="form-control" [(ngModel)]="assmentInfo['position']">
+          <option value="1">Executive and Sr. Management(C-Level, Sr. Director)</option>
+          <option value="2">Manager/Supervisor</option>
+          <option value="3">Employee (Non- Manager)</option>
+        </select>
+      </div>
+
+      <div class="button-area my-3">
+        <button type="submit" class="btn btn-default" (click)="saveInfo()">save</button>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

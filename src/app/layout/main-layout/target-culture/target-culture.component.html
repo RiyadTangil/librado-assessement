@@ -1,0 +1,129 @@
+<app-header [title]="'Prioritizing Target Culture'"></app-header>
+<div class="w-100 my-3">
+  <p class="info">
+    Place yourself in the mindset of the Target Culture of the company. This is your chance to help design a company culture that would provide the environment for you be at your best. Please click and drag the cultural statements from the selections area that you feel describe what you desire to be most likely to occur in the target culture and what you would want to be least likely to occur in the target culture. <br/> Note: If you want to make a change to your list, click and drag to return the statement back to the Cultural Statement Selection area and chose again.  Once you are satisfied with your prioritization, please click continue 
+  </p>
+  <!-- <div cdkDropListGroup class="dragableContainer">
+    <div class="example-container" *ngIf="renderDrag">
+      <div
+        cdkDropList
+        [cdkDropListData]="valueStatementA"
+        class="statement-container"
+        id="valueStatementA"
+        (cdkDropListDropped)="drop($event)"
+      >
+        <div class="statement-head">Most Likely to Occur</div>
+        <div
+          class="statement-box"
+          [cdkDragDisabled]="isDisabled(item)"
+          *ngFor="let item of valueStatementA; let i = index"
+          cdkDrag
+        >
+          {{ item.value }}
+          <span class="number">{{ i + 1 }}</span>
+        </div>
+      </div>
+      <div
+        cdkDropList
+        [cdkDropListData]="valueStatementB"
+        class="statement-container"
+        id="valueStatementB"
+        (cdkDropListDropped)="drop($event)"
+      >
+        <div
+          class="statement-box"
+          *ngFor="let item of valueStatementB; let i = index"
+          cdkDrag
+        >
+          {{ item.value }}
+          <span class="number">{{ i + 7 }}</span>
+        </div>
+      </div>
+      <div
+        cdkDropList
+        [cdkDropListData]="valueStatementC"
+        class="statement-container"
+        (cdkDropListDropped)="drop($event)"
+        id="valueStatementC"
+      >
+        <div
+          class="statement-box"
+          *ngFor="let item of valueStatementC; let i = index"
+          cdkDrag
+        >
+          {{ item.value }}
+          <span class="number">{{ i + 14 }}</span>
+        </div>
+      </div>
+      <div
+        cdkDropList
+        [cdkDropListData]="valueStatementD"
+        class="statement-container"
+        (cdkDropListDropped)="drop($event)"
+        id="valueStatementD"
+      >
+        <div
+          class="statement-box"
+          *ngFor="let item of valueStatementD; let i = index"
+          cdkDrag
+        >
+          {{ item.value }}
+          <span class="number">{{ i + 21 }}</span>
+        </div>
+      </div>
+      <div
+        cdkDropList
+        [cdkDropListData]="valueStatementE"
+        class="statement-container"
+        (cdkDropListDropped)="drop($event)"
+        id="valueStatementE"
+      >
+        <div
+          class="statement-box"
+          *ngFor="let item of valueStatementE; let i = index"
+          cdkDrag
+        >
+          {{ item.value }}
+          <span class="number">{{ i + 28 }}</span>
+        </div>
+      </div>
+      <div
+        cdkDropList
+        [cdkDropListData]="valueStatementF"
+        class="statement-container"
+        (cdkDropListDropped)="drop($event)"
+        id="valueStatementF"
+      >
+        <div
+          class="statement-box"
+          *ngFor="let item of valueStatementF; let i = index"
+          cdkDrag
+        >
+          {{ item.value }}
+          <span class="number">{{ i + 35 }}</span>
+        </div>
+      </div>
+      <div
+        cdkDropList
+        [cdkDropListData]="valueStatementG"
+        class="statement-container"
+        (cdkDropListDropped)="drop($event)"
+        id="valueStatementG"
+      >
+        <div
+          class="statement-box"
+          *ngFor="let item of valueStatementG; let i = index"
+          cdkDrag
+        >
+          {{ item.value }}
+          <span class="number">{{ i + 42 }}</span>
+        </div>
+        <div class="statement-head">Least Likely to Occur</div>
+
+      </div>
+    </div>
+  </div> -->
+
+  <app-value-dragable></app-value-dragable>
+  </div>
+  <app-footer></app-footer>

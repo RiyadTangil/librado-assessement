@@ -1,0 +1,29 @@
+<app-header [title]="'Operational Diagnostics'"></app-header>
+<div class="row p-3 my-3">
+    <div class="col-12">
+        <div class="form-area">
+          <div
+            class="question"
+            *ngFor="let question of allQuestions; let i = index"
+          >
+            <label for="exampleFormControlInput1">{{
+              i + 1 + ")  " + question.question
+            }}</label>
+
+
+            <div class="btn-container my-2">
+              <button class="shadow" (click)="question.selected = 4"[ngClass]="question.selected === 4 ? 'active':''">Star</button>
+              <button class="shadow" (click)="question.selected = 3"[ngClass]="question.selected === 3 ? 'active':''">Strong</button>
+              <button class="shadow" (click)="question.selected = 2"[ngClass]="question.selected === 2 ? 'active':''">Satisfactory</button>
+              <button class="shadow" (click)="question.selected = 1" [ngClass]="question.selected === 1 ? 'active':''" >Unsatisfactory</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 button-area">
+          <button (click)="submit()">submit</button>
+        </div>
+      </div>
+
+</div>
+<app-footer></app-footer>

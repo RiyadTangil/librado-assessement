@@ -1,0 +1,61 @@
+<app-header [title]="'Operational Diagnostics'"></app-header>
+<div class="row p-3 my-3">
+  <p>Please click the button to make your selection for each question</p>
+
+  <div class="title">
+    <h1>{{ questionKeys[currentQuestion].replace("_", "  ") }}</h1>
+  </div>
+  <hr />
+  <div class="col-12">
+    <div class="about-option">
+      <p>
+        <strong>Star</strong>
+        <small> Capability and/or ability for outstanding performance </small>
+      </p>
+      <p>
+        <strong>Strong</strong>
+        <small>
+          COnsistently meets/usually exceeds. Visible capacity and /or
+          capability
+        </small>
+      </p>
+      <p>
+        <strong>Satisfactory</strong>
+        <small> Capability and/or ability for outstanding performance </small>
+      </p>
+      <p>
+        <strong>Unsatisfactory</strong>
+        <small>
+          Perfomance needs to be managed. Corrective action needed quickly.
+        </small>
+      </p>
+    </div>
+ 
+    <div class="form-area">
+      <div
+        class="question"
+        *ngFor="let question of showQuestions; let i = index"
+      >
+        <label for="exampleFormControlInput1">{{
+          i + 1 + ")  " + question.question
+        }}</label>
+
+        <div class="btn-container my-2">
+          <button
+            class="shadow"
+            *ngFor="let option of question?.options"
+            (click)="question.selected = option.value"
+            [ngClass]="question.selected === option.value ? 'active' : ''"
+          >
+            {{ option?.option }}
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 button-area">
+      <button (click)="submit()">submit </button>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

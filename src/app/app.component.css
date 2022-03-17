@@ -1,0 +1,62 @@
+.mat-drawer {
+  overflow-y: visible;
+}
+
+
+
+
+.sidenavContainer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.mat-drawer-container .mat-drawer-opened {
+  width: min(300px, 80vw) !important;
+}
+
+.main-page {
+  padding: 1rem 2rem;
+  background-color: var(--grey-bg);
+  height: 100%;
+}
+
+.contextContainer {
+  width: 100%;
+  margin-top: 1rem 0rem;
+  padding: 1rem 2.5rem;
+  background: white;
+  border-radius: 15px;
+}
+
+.mat-drawer-inner-container{
+  position: relative;
+}
+
+.main-page .menuBtn{
+  position: absolute;
+  top: 50%;
+  left: 0rem;
+  background: white;
+  border-radius: 0px 10px 10px 0px;
+}
+
+.main-page .menuBtn .bi{
+  font-size: 2rem;
+}
+
+hr {
+  background-color: #605e5e !important;
+  padding: 0;
+}
+
+
+@media screen and (max-width: 768px) {
+ 
+.main-page {
+  padding: 0px;
+}
+ 
+}

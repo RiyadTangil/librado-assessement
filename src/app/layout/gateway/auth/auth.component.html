@@ -1,0 +1,125 @@
+<div *ngIf="showLog" class="container-fluid">
+  <div class="row">
+    <div class="col-6 left">
+        <div class="text-pitch">
+          <div class="heading">
+            <h3>Welcome Back</h3>
+            <p>Enter your email and password to sign in.</p>
+          </div>
+
+          <div class="form-area">
+
+            <label for="exampleFormControlInput1">Email address</label>
+            <input type="email" class="form-control" placeholder="Your email" [(ngModel)]="loginData.email">
+
+            <label for="exampleFormControlInput1">Password</label>
+            <input type="password" class="form-control" placeholder="Your Password" [(ngModel)]="loginData.password">
+
+          </div>
+
+          <div class="switch-area">
+            <label class="switch" [ngClass]="isRememberMe?'switch-off':'switch-on'"><input type="checkbox" [(ngModel)]="isRememberMe" />    <div></div>
+            </label>
+
+            <p>Remember me</p>
+          </div>
+
+          <div class="submit">
+            <button (click)="login()" class="btn">sign in</button>
+          </div>
+
+          <div class="sign_up">
+            <p>Dont you have an account?<span (click)="showLog=!showLog" class="button">&nbsp;Sign Up</span></p>
+          </div>
+
+
+        </div>
+    </div>
+
+    <div class="col-6 right">
+      <div class="poster">
+        <img src="/assets/images/login_bg.png" alt="">
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+<div *ngIf="!showLog" class="container-fluid">
+<div class="row">
+  <div class="col-12 banner">
+    <img src="/assets/images/reg_bg.png" alt="">
+
+    <div class="content">
+      <p class="welcome">Welcome !</p>
+      <p class="caption">Caption here</p>
+
+      <div class="form-box shadow">
+        <p class="text1">Register with</p>
+
+        <div class="social row">
+
+          <div class="col-4">
+            <div class="ic shadow">
+              <i class="bi bi-facebook"></i>
+            </div>
+          </div>
+
+          <div class="col-4">
+            <div class="ic shadow">
+              <i class="bi bi-apple"></i>
+            </div>
+          </div>
+
+          <div class="col-4">
+            <div class="ic shadow">
+              <i class="bi bi-google"></i>
+            </div>
+          </div>
+
+        </div>
+
+        <p class="text2">or</p>
+
+        <div class="form-area">
+
+          <label for="exampleFormControlInput1">Name</label>
+          <input type="text" class="form-control" placeholder="Your name" [(ngModel)]="signUpData.name">
+
+          <label for="exampleFormControlInput1">Email</label>
+          <input type="email" class="form-control" placeholder="Your email" [(ngModel)]="signUpData.email">
+
+          <label for="exampleFormControlInput1">Password</label>
+          <input type="password" class="form-control" placeholder="Your Password" [(ngModel)]="signUpData.password">
+
+        </div>
+
+        <div class="switch-area">
+          <label class="switch"><input type="checkbox" />    <div></div>
+          </label>
+
+          <p>Remember me</p>
+        </div>
+
+        <div class="submit">
+          <button class="btn" (click)="signUp()">sign up</button>
+        </div>
+
+        <div class="sign_up">
+          <p>Do you already have an account?<span (click)="showLog=!showLog" class="button">&nbsp;Sign In</span></p>
+        </div>
+
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+</div>
+</div>

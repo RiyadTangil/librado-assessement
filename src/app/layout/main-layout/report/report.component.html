@@ -1,0 +1,174 @@
+<app-header [title]="'INsight Reporting'"></app-header>
+<div class="row">
+  <div class="w-100 my-4 postion-relative">
+    <div
+      class="test-modal text-center"
+      [ngClass]="!showModal ? 'b-block' : 'd-none'"
+    >
+      <div class="mod-header d-flex justify-content-end">
+        <button (click)="handleModalHide()" type="button" class="btn btn-light">
+          ❌
+        </button>
+      </div>
+      <div class="mod-body">
+        <h5 class="heading-text pt-2 pb-4">
+          Your input is important and much appreciated. Thank you for taking the
+          time to participate in People.Insight for your organization.
+        </h5>
+        <h5 class="heading-text fw-bold">WHY WE “ACCEL”</h5>
+        <div class="d-flex justify-content-center py-2">
+          <p class="w-75 fs-5">
+            <strong> PeopleAccel Advisory Group </strong> utilizes our network
+            of highly efficient Executives to provide small and medium-sized
+            businesses across a wide variety of industries with the business
+            support they need to grow. With over
+            <span class="main-text">30 years</span> of Human Resources,
+            Operations and Business Development experience at your disposal, we
+            allow our clients to focus on what they do best and help them do it
+            more efficiently
+          </p>
+        </div>
+        <p class="pb-2 fst-italic fw-bold">Let’s start with your people!</p>
+        <a
+          class="text-decoration-none headign-text fs-5 pb-4 d-block"
+          href="https://peopleaccelsolutions.com/"
+          target="_blank"
+          >peopleaccelsolutions.com</a
+        >
+        <div class="d-flex justify-content-center">
+          <div class="border-box">
+            <h4 class="fw-bold">
+              <span class="heading-text">People</span
+              ><span>+ Operational Excellence</span> =
+              <span class="main-text">ACCEL</span>erating Performance
+            </h4>
+          </div>
+        </div>
+        <small class="py-3 fs-5 d-block text-muted"
+          >*Engaging and powering your people to <br />
+          level up operational excellence</small
+        >
+      </div>
+    </div>
+    <p class="w-100 text-center mt-4 overallText">
+      Overall Hapiness Factor <br />
+      {{ hapinessFactor }}/10
+    </p>
+    <div class="emojiContainer my-3">
+      <div class="emoji" *ngIf="hapinessFactor >= 0 && hapinessFactor < 2">
+        😌
+      </div>
+      <div class="emoji" *ngIf="hapinessFactor >= 2 && hapinessFactor < 4">
+        😞
+      </div>
+      <div class="emoji" *ngIf="hapinessFactor >= 4 && hapinessFactor < 6">
+        😐
+      </div>
+      <div class="emoji" *ngIf="hapinessFactor >= 6 && hapinessFactor < 8">
+        🙂
+      </div>
+      <div class="emoji" *ngIf="hapinessFactor >= 8 && hapinessFactor <= 10">
+        😁
+      </div>
+    </div>
+  </div>
+  <div class="w-100 mt-4" *ngIf="isChartRender">
+    <div echarts [options]="targetChartOption" class="demo-chart"></div>
+  </div>
+
+  <!-- ========================================================= -->
+
+  <hr />
+
+  <div class="tabs w-100 d-flex flex-row justify-content-evenly mt-4">
+    <div class="tab-box" (click)="changeTab(tab)" *ngFor="let tab of tabs">
+      <p [ngClass]="[currentTab === tab ? 'active-tab' : 'inactive-tab']">
+        {{ tab }}
+      </p>
+    </div>
+  </div>
+
+  <div class="title">
+    <h4>{{ currentTab }}</h4>
+  </div>
+
+  <table class="table my-4">
+    <thead>
+      <th class="p-1  fw-normal heading-text">Question</th>
+      <th class="p-1  fw-normal heading-text">Diagnosis</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of showData">
+        <td>{{ data.question }}</td>
+        <td>{{ data.option + " ( " + data.percentage.toFixed(1) + "% )" }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="table my-4">
+    <thead>
+      <th class="p-1 heading-text fw-normal ">Priority</th>
+      <th class="p-1 urgent-text">Urgent</th>
+      <th class="p-1 critical-text">Critical</th>
+      <th class="p-1 important-text">Important</th>
+      <th class="p-1 meaningful-text">Meaningful</th>
+    </thead>
+    <tbody>
+      <!-- <tr *ngFor="let data of showData">
+        <td>{{data.question}}</td>
+        <td>{{data.option+' ( '+data.percentage.toFixed(1)+'% )'}}</td>
+      </tr> -->
+
+      <tr *ngFor="let data of tableData">
+        <td>{{ data["type"] }}</td>
+        <td>{{data?.['Urgent']?.['question'] || '-'}}</td>
+        <td>{{data?.['critical']?.['question'] || '-'}}</td>
+        <td>{{data?.['important']?.['question'] || '-'}}</td>
+        <td>{{data?.['Meaningful']?.['question'] || '-'}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- ========================================================= -->
+  <!-- <div class="col-12">
+    <h5>Current Culture</h5>
+    <table class="w-100">
+      <thead>
+        <th></th>
+        <th *ngFor="let row of this.allValues; let i = index">
+          {{i+1}}
+        </th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let valueOrders of currentFrequencyTable; let i = index">
+          <td>{{this.allValues[i]?.['value']}}</td>
+
+          <td *ngFor="let order of valueOrders">
+            {{order}}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-12">
+    <h5>Target Culture</h5>
+    <table class="w-100">
+      <thead>
+        <th></th>
+        <th *ngFor="let row of this.allValues; let i = index">
+          {{i+1}}
+        </th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let valueOrders of TargetFrequencyTable; let i = index">
+          <td>{{this.allValues[i]?.['value']}}</td>
+
+          <td *ngFor="let order of valueOrders">
+            {{order}}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div> -->
+</div>
+<app-footer ></app-footer>

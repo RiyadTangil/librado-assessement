@@ -1,0 +1,70 @@
+.title{
+  font-family: 'Porcelain';
+  font-size: 3rem;
+}
+
+.form-area label{
+  margin-top: 1.5rem;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.form-area input{
+  border-radius: 12px;
+  width: 80%;
+  text-align:left;
+}
+
+.form-area button{
+  background: white;
+  width: fit-content;
+  border-radius: 10px;
+  margin-right: 1rem;
+  height: 2rem;
+  border: none;
+  padding: 0rem 1rem;
+  color: black;
+}
+
+.button-area{
+  margin-top:2rem
+}
+
+.button-area button{
+  background: rgba(255, 145, 77, 1);
+  min-width: 300px;
+  padding:0.5rem 2rem;
+  border: none;
+  border-radius: 8px;
+  text-transform: capitalize;
+  font-size: 12px;
+  color: white;
+}
+
+.question{
+  width: 100%;
+}
+
+.question .btn-container .active{
+  background: rgba(255, 145, 77, 1);
+  color: white;
+  font-weight: 600;
+}
+
+.about-option{
+  position:fixed;
+  top: 45%;
+  z-index: 1;
+  width:12vw;
+  right:3%;
+  background-color: aliceblue;
+  padding: 5px;
+ border-radius:8px;
+ font-size:13px;
+}
+/* .operation-container .modal-backdrop.show{
+  opacity: .0 !important;
+} */
+
+
+

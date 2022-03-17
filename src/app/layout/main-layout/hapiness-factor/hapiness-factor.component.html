@@ -1,0 +1,56 @@
+<app-header [title]="'Happiness Factor'"></app-header>
+
+<div class="w-100 my-4">
+  <div class="hapinessContainer" *ngFor="let question of allQuestions">
+    <p>
+     {{question.question}}
+    </p>
+  
+    <div class="sliderContainer my-4">
+      <mat-slider
+        thumbLabel
+        [displayWith]="formatLabel"
+        tickInterval="1000"
+        ondrag=""
+        onchange=""
+        [tickInterval]="1"
+        step="10"
+        min="0"
+        max="10"
+        aria-label="units"
+        [step]="1"
+        (input)="onInputChange($event , question)"
+      ></mat-slider>
+      <div class="centerline">|</div>
+      <div class="w-100 d-flex justify-content-between">
+        <p class="m-0">1</p>
+        <p class="m-0" style="padding-left: 10px">5</p>
+        <p class="m-0">10</p>
+      </div>
+      <!-- <div class="emojiContainer-small">
+        <div class="emoji" *ngIf="question.status >= 0 && question.status < 2">😌</div>
+        <div class="emoji" *ngIf="question.status >=2 && question.status < 4">😞</div>
+        <div class="emoji" *ngIf="question.status >= 4 && question.status < 6">😐</div>
+        <div class="emoji" *ngIf="question.status >= 6 && question.status < 8">🙂</div>
+        <div class="emoji" *ngIf="question.status >= 8 && question.status <= 10">😁</div>
+      </div> -->
+    </div>
+  </div>
+  <hr/>
+
+  <p class="w-100 text-center mt-4 overallText">Overall Happiness Factor</p>
+
+  <div class="emojiContainer my-3">
+    <div class="emoji" *ngIf="totalScore >= 0 && totalScore < 2">😌</div>
+    <div class="emoji" *ngIf="totalScore >=2 && totalScore < 4">😞</div>
+    <div class="emoji" *ngIf="totalScore >= 4 && totalScore < 6">😐</div>
+    <div class="emoji" *ngIf="totalScore >= 6 && totalScore < 8">🙂</div>
+    <div class="emoji" *ngIf="totalScore >= 8 && totalScore <= 10">😁</div>
+  </div>
+ 
+</div>
+
+<div class="col-12 button-area text-end">
+  <button (click)="submit()" [disabled]="!isDone">submit</button>
+</div>
+<app-footer></app-footer>

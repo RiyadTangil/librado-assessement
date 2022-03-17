@@ -1,0 +1,39 @@
+<div class="content">
+  <h3 style="color: #ff914d">For {{currentCategory}}</h3>
+  <p>1. Strong Disagree</p>
+  <p>2. Disagree</p>
+  <p>3. Neither Agree nor Disagree</p>
+  <p>4. AgreeStrong Agree</p>
+  <p>5. Strong Agree</p>
+
+  <hr class="hr-1" />
+
+  <div class="form-area">
+    <div class="row">
+      <div class="col-12">
+        <div class="form-area">
+          <div
+            class="question"
+            *ngFor="let question of quetionareData; let i = index"
+          >
+            <label for="exampleFormControlInput1">{{
+              i + 1 + " " + question.question
+            }}</label>
+
+            <div class="btn-container my-2">
+              <button class="shadow" (click)="question.selected = 1" [ngClass]="question.selected === 1 ? 'active':''" >1</button>
+              <button class="shadow" (click)="question.selected = 2"[ngClass]="question.selected === 2 ? 'active':''">2</button>
+              <button class="shadow" (click)="question.selected = 3"[ngClass]="question.selected === 3 ? 'active':''">3</button>
+              <button class="shadow" (click)="question.selected = 4"[ngClass]="question.selected === 4 ? 'active':''">4</button>
+              <button class="shadow" (click)="question.selected = 5"[ngClass]="question.selected === 5 ? 'active':''">5</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 button-area">
+          <button (click)="submit()">submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

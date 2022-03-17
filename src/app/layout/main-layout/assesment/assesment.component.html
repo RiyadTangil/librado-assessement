@@ -1,0 +1,49 @@
+<app-header [title]="'Getting Started'"></app-header>
+<div class="w-100">
+  <div
+  class="content tab-area"
+  *ngIf="currentTab === 'assment_notification'"
+>
+
+<div class="row">
+  <div class="col-md-4 d-flex justify-content-center align-items-center">
+    <img class="clock_img" width="100%" height="auto" src="../../../../assets/images/clock.jpeg" alt="">
+  </div>
+  <div class="col-md-8 text-start">
+    <p style="font-weight: 500; font-size: 1rem; color: black">
+      This assessment tool is being used across the company to help break through barriers to improved performance and productivity by revealing how you view the current culture values compared to how you would like your experience to be in the future. This is defined in your assessment of the target culture.
+    </p>
+    <p style="font-weight: 500; font-size: 1rem; color: black">
+      Your input is captured in 3 ways <br/>
+      1.) Defining your Happiness Factor <br/>
+      2.) Prioritizing current and target cultural statements <br/>
+      3.) Evaluating operational areas that are important to drive <br/>your employee experience, increased profitability, and raving customer fans.
+    </p>
+    <p style="font-weight: 500; font-size: 1rem; color: black">
+      Thank you for taking the time to provide your input! Let’s get started.  Click continue to begin.
+    </p>
+  </div>
+
+</div>
+<div class="col-12 text-end button-area">
+  <button [routerLink]="'/happiness-factor'">continue</button>
+</div>
+  <!-- <p class="w-100 text-start">Getting Started</p>
+  <div class="row text-start">
+    <p style="font-weight: 500; font-size: 1rem; color: black">
+      This assessment tool is being used across the company to help break through barriers to improved performance and productivity by revealing how you view the current culture values compared to how you would like your experience to be in the future. This is defined in your assessment of the target culture.
+    </p>
+    <p style="font-weight: 500; font-size: 1rem; color: black">
+      The tool is based on value statements that have been identified and validated to reflect different culture types through a rigorous research and development process.  Each person on completes the assessment individually, indicating where they believe their culture stands compared to where they want it to be. Then the responses are compiled and processed to provide a composite score on each of the value statements, showing the precise gap between current and target scores on each statement.
+    </p>
+    <p style="font-weight: 500; font-size: 1rem; color: black">
+      In addition to assessing the employee experience, the Accelerator Analysis will complete the picture. The scores pinpoint the specific areas where the biggest gaps need to be closed between where the team is now and where they want to be with the organization’s culture values in the future. It’s a powerful in what is energizing and what is not to creating a high-performance culture of trust. The Accelerator Analysis provides a basis for creating action plans to fosters team bonding and alignment on future direction by focusing on the most urgent and critical items to tackle. 
+    </p>
+    <div class="col-12 text-end button-area">
+      <button [routerLink]="'/current-culture'">continue</button>
+    </div>
+  </div> -->
+</div>
+
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,141 @@
+<app-header [title]="'Prioritizing Current Culture'"></app-header>
+<div class="w-100 my-3">
+  <p class="info">
+    Place yourself in the mindset of the current culture of the company. Please review the cultural statements located in the selections area. <br/>
+1) Click on the up arrow located on the right side of the statement to select your top 3 choices that are Most Likely to Occur in the current culture. <br/>
+2) Click on the down arrow to select your top 3 choices those that are Least Likely to Occur in the current culture.<br/>
+Note: If you want to make a change to your list, click and drag to return the statement back to the Cultural Statement Selections area. It is also possible to change the prioritizations of your selections by clicking and dragging into a new position.
+Once you are satisfied with your prioritization, please click continue.
+  </p>
+  <!-- <div cdkDropListGroup class="dragableContainer">
+    <div class="example-container" *ngIf="renderDrag">
+      <div
+        cdkDropList
+        [cdkDropListData]="valueStatementA"
+        class="statement-container"
+        id="valueStatementA"
+        (cdkDropListDropped)="drop($event)"
+      >
+        <div class="statement-head">Most Likely to Occur</div>
+        <div
+          class="statement-box"
+          [cdkDragDisabled]="isDisabled(item)"
+          *ngFor="let item of valueStatementA; let i = index"
+          cdkDrag
+        >
+          {{ item.value }}
+          <span class="number">{{ i + 1 }}</span>
+        </div>
+      </div>
+      <div
+        cdkDropList
+        [cdkDropListData]="valueStatementB"
+        class="statement-container"
+        id="valueStatementB"
+        (cdkDropListDropped)="drop($event)"
+      >
+        <div
+          class="statement-box"
+          *ngFor="let item of valueStatementB; let i = index"
+          cdkDrag
+        >
+          {{ item.value }}
+          <span class="number">{{ i + 7 }}</span>
+        </div>
+      </div>
+      <div
+        cdkDropList
+        [cdkDropListData]="valueStatementC"
+        class="statement-container"
+        (cdkDropListDropped)="drop($event)"
+        id="valueStatementC"
+      >
+        <div
+          class="statement-box"
+          *ngFor="let item of valueStatementC; let i = index"
+          cdkDrag
+        >
+          {{ item.value }}
+          <span class="number">{{ i + 14 }}</span>
+        </div>
+      </div>
+      <div
+        cdkDropList
+        [cdkDropListData]="valueStatementD"
+        class="statement-container"
+        (cdkDropListDropped)="drop($event)"
+        id="valueStatementD"
+      >
+        <div
+          class="statement-box"
+          *ngFor="let item of valueStatementD; let i = index"
+          cdkDrag
+        >
+          {{ item.value }}
+          <span class="number">{{ i + 21 }}</span>
+        </div>
+      </div>
+      <div
+        cdkDropList
+        [cdkDropListData]="valueStatementE"
+        class="statement-container"
+        (cdkDropListDropped)="drop($event)"
+        id="valueStatementE"
+      >
+        <div
+          class="statement-box"
+          *ngFor="let item of valueStatementE; let i = index"
+          cdkDrag
+        >
+          {{ item.value }}
+          <span class="number">{{ i + 28 }}</span>
+        </div>
+      </div>
+      <div
+        cdkDropList
+        [cdkDropListData]="valueStatementF"
+        class="statement-container"
+        (cdkDropListDropped)="drop($event)"
+        id="valueStatementF"
+      >
+        <div
+          class="statement-box"
+          *ngFor="let item of valueStatementF; let i = index"
+          cdkDrag
+        >
+          {{ item.value }}
+          <span class="number">{{ i + 35 }}</span>
+        </div>
+      </div>
+      <div
+        cdkDropList
+        [cdkDropListData]="valueStatementG"
+        class="statement-container"
+        (cdkDropListDropped)="drop($event)"
+        id="valueStatementG"
+      >
+        <div
+          class="statement-box"
+          *ngFor="let item of valueStatementG; let i = index"
+          cdkDrag
+        >
+          {{ item.value }}
+          <span class="number">{{ i + 42 }}</span>
+        </div>
+        <div class="statement-head">Least Likely to Occur</div>
+
+      </div>
+    </div>
+  </div>
+  <div class="w-100 d-flex justify-content-end">
+    <div class="submit">
+      <button class="btn" [disabled]="changesDone < 1" (click)="saveData()">
+        Continue
+      </button>
+    </div>
+  </div> -->
+
+  <app-value-dragable [type]="'current'"></app-value-dragable>
+ 
+</div>
+<app-footer></app-footer>

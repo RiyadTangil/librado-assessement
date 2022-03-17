@@ -1,0 +1,108 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+/* *{
+} */
+
+.main-page{
+  padding: 1rem 2rem;
+  background-color: rgba(248, 249, 250, 1);
+  height: 100vh;
+}
+
+.banner{
+  width: 100%;
+}
+
+.banner .header{
+  top:0;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.aligns{
+  display: inline-block;
+}
+
+.banner .header .text1{
+  color: gray;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.banner .header .text2{
+  font-size: 14px;
+  float: right;
+
+}
+
+.banner .header .text2 .righty{
+  margin: 0 1rem;
+  display: inline-block;
+}
+
+input{
+  border-radius: 12px;
+}
+
+.banner .header .text2 .righty p{
+  margin: 0;
+  color: gray;
+  cursor: pointer;
+}
+
+.content{
+  width: 100%;
+  margin-top: 3rem;
+  padding: 1rem 2.5rem;
+  background: white;
+  border-radius: 15px;
+}
+
+.content .month-btn{
+  padding:0.5rem 0.5rem;
+  border:1px solid rgba(255, 145, 77, 1);
+  border-radius: 12px;
+  background: white;
+  margin-right: 0.5rem;
+}
+
+.content .month-btn:hover{
+  background: rgba(255, 145, 77, 1);
+  color: white;
+}
+
+.content p{
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: gray;
+}
+
+.content .form-texts{
+  text-align: left;
+}
+
+.form-area label{
+  margin-top: 1rem;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.form-area input{
+  border-radius: 12px;
+  width: 80%;
+}
+
+.content .button-area{
+  margin-top:2rem
+}
+
+.content .button-area button{
+  background: rgba(255, 145, 77, 1);
+  min-width: 300px;
+  padding:0.5rem 2rem;
+  border: none;
+  border-radius: 8px;
+  text-transform: capitalize;
+  font-size: 12px;
+  color: white;
+}

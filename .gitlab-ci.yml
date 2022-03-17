@@ -1,0 +1,30 @@
+stages:
+  - build
+  - deploy
+
+
+build-stage:
+  image: node
+  stage: build
+  tags:
+    - build
+    - linux
+  script:
+    - npm install
+    - npm run build  
+
+  artifacts:
+    paths:
+      - dist/librado/
+
+
+deploy-stage:
+  image: node
+  stage: deploy
+  tags:
+    - build
+    - linux
+  script:
+    - npm install -g netlify-cli
+    - netlify deploy --dir=./dist/librado --prod  
+

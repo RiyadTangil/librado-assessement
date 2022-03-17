@@ -1,0 +1,28 @@
+<div class="container-fluid main-page">
+  <div class="row">
+    <div class="col-2">
+      <app-sidebar></app-sidebar>
+    </div>
+    <div class="col-10">
+      <!-- <app-header [currentPage]="'FAQ'"></app-header> -->
+
+      <div class="content">
+        <div class="w-100 heading my-2">FAQ</div>
+
+        <div class="w-100 faq-container">
+          <ul>
+            <li *ngFor="let data of faqData">
+              <p class="title">
+                {{data.title}}
+              </p>
+              <p class="answer">
+               {{data.description}}
+              </p>
+            </li>
+          </ul>
+          <div class="faq"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

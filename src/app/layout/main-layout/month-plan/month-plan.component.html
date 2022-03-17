@@ -1,0 +1,53 @@
+<div class="container-fluid main-page">
+  <div class="row">
+    <div class="col-2">
+      <app-sidebar></app-sidebar>
+    </div>
+    <div class="col-10">
+      <!-- <app-header [currentPage]="'Month Plan'"></app-header> -->
+
+      <div class="content">
+        <div>
+          <button class="month-btn"  (click)="filterMonth('')">{{'ALL'}}</button>
+          <button class="month-btn" *ngFor="let month of monthArr" (click)="filterMonth(month)">{{month}}</button>
+        </div>
+
+        <p class="mt-3" (click)="calculateStatus(gapStatus)" style="cursor: pointer;">{{'GAP PERCENTAGE: '+ gapPercentage + '%'}} - ({{gapStatus}})</p>
+
+        <div>
+          <button class="month-btn" (click)="calculateStatus('')">ALL</button>
+          <button class="month-btn" (click)="calculateStatus('meaningful')">Meaningful</button>
+          <button class="month-btn" (click)="calculateStatus('urgent')">Urgent</button>
+          <button class="month-btn" (click)="calculateStatus('critical')">Critical</button>
+          <button class="month-btn" (click)="calculateStatus('important')">Important</button>
+        </div>
+
+        <div class="mt-4">
+          <small
+            >Short description about Critical goes here. Same for other
+            initiatives like Urgent etc
+          </small>
+
+          <br /><br />
+
+          <div class="month-container" *ngFor="let month of monthData">
+            <small
+              ><b
+                >{{month.title}}</b
+              ></small
+            ><br />
+            <ul class="mt-2">
+              <li>
+               {{month.description}}
+              </li>
+            </ul>
+            <br />
+          </div>
+
+          <br />
+        </div>
+      </div>
+      <br />
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+.footer-text{
+    position: relative;
+    padding-bottom:20px;
+}
+.footer-text::after{
+    position: absolute;
+    width: 60px;
+    content: "";
+    height: 2px;
+    left: 50%;
+    bottom: 0%;
+    background-color: 	#777;
+}

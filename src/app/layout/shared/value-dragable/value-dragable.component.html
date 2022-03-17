@@ -1,0 +1,135 @@
+<div cdkDropListGroup class="dragableContainer">
+    <div class="example-container" >
+
+      <div class="valueContainer w-100">
+        <div class="heading" *ngIf="!mostLeastDone"> Cultural Statements Selections</div>
+        <div class="heading" *ngIf="mostLeastDone">Arrange the remaining values</div>
+        <div class="body" [ngClass]="type == 'current'? 'current':'target'">
+          <div
+            cdkDropList
+            [cdkDropListData]="allValuesA"
+            class="allValue-container"
+            (cdkDropListDropped)="drop($event)"
+            id="allValuesA"
+          >
+            <div
+              class="statement-box"
+              *ngFor="let item of allValuesA; let i = index"
+              cdkDrag
+            >
+              {{ item.value }}
+              <div class="selector">
+                <div class="mostLikely ptr">
+                  <i class="bi bi-arrow-up-circle-fill" matTooltip="Most Likely" (click)="addValue(item,'most' , i)"></i>
+                </div>
+                <div class="leastLikely ptr">
+                  <i class="bi bi-arrow-down-circle-fill" matTooltip="Least Likely" (click)="addValue(item,'least',i)"></i>
+                </div>
+              </div>
+              <!-- <span class="number">{{ i + 1 }}</span> -->
+            </div>
+          </div>
+        </div>
+    </div>
+
+  <!-- <div class="w-100 d-flex flex-row listing" *ngIf="!mostLeastDone"> -->
+    <div class="w-100 d-flex flex-row listing">
+      <div class="groupContainer w-50">
+        <div class="heading">Most Likely to occur ({{mostLikelyA.length}}/3)</div>
+        <div class="body" [ngClass]="type == 'current'? 'current':'target'">
+            <div
+            cdkDropList
+            [cdkDropListData]="mostLikelyA"
+            class="statement-container"
+            id="mostLikelyA"
+            (cdkDropListDropped)="drop($event)"
+          >
+            <!-- <div class="statement-head">Most Likely to Occur</div> -->
+            <div
+              class="statement-box"
+              *ngFor="let item of mostLikelyA; let i = index"
+              cdkDrag
+            >
+              {{ item.value }}
+              <span class="number">{{ i + 1 }}</span>
+              <div class="selector">
+                <div class="ptr">
+                  <i class="bi bi-x-circle-fill" matTooltip="Remove Value" (click)="remove(item,'most' , i)"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div
+            cdkDropList
+            [cdkDropListData]="mostLikelyB"
+            class="statement-container"
+            id="mostLikelyB"
+            (cdkDropListDropped)="drop($event)"
+          >
+            <div
+              class="statement-box"
+              *ngFor="let item of mostLikelyB; let i = index"
+              cdkDrag
+            >
+              {{ item.value }}
+              <span class="number">{{ i + 6 }}</span>
+            </div>
+          </div> -->
+        </div>
+    </div>
+    <div class="groupContainer w-50">
+        <div class="heading">Least Likely to occur ({{leastLikelyA.length}}/3)</div>
+        <div class="body" [ngClass]="type == 'current'? 'current':'target'">
+            <div
+            cdkDropList
+            [cdkDropListData]="leastLikelyA"
+            class="statement-container"
+            (cdkDropListDropped)="drop($event)"
+            id="leastLikelyA"
+          >
+            <div
+              class="statement-box"
+              *ngFor="let item of leastLikelyA; let i = index"
+              cdkDrag
+            >
+              {{ item.value }}
+              <span class="number">{{ i + 1 }}</span>
+              <div class="selector">
+                <div class="ptr">
+                  <i class="bi bi-x-circle-fill" matTooltip="Remove Value" (click)="remove(item,'least' , i)"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div
+            cdkDropList
+            [cdkDropListData]="leastLikelyB"
+            class="statement-container"
+            (cdkDropListDropped)="drop($event)"
+            id="leastLikelyB"
+          >
+            <div
+              class="statement-box"
+              *ngFor="let item of leastLikelyB; let i = index"
+              cdkDrag
+            >
+              {{ item.value }}
+              <span class="number">{{ i + 6 }}</span>
+            </div>
+          </div> -->
+        </div>
+    </div>
+    </div>
+
+     
+   
+    
+    
+    </div>
+  </div>
+
+  <div class="w-100 d-flex justify-content-end my-4">
+    <div class="submit">
+        <button class="btn" [disabled]="!mostLeastDone" (click)="submit()" >Continue</button>
+      </div>
+</div>

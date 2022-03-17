@@ -1,0 +1,62 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+@import "~ngx-toastr/toastr";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif, Porcelain;
+}
+.main-text{
+  color: rgba(255, 145, 77, 1);
+}
+.heading-text{
+  color: rgba(0, 74, 173, 1);
+
+}
+.main-bg{
+  background-color:rgba(0, 74, 173, 1);
+}
+.button-area button {
+  background: rgba(255, 145, 77, 1);
+  width: fit-content;
+  padding: 0.5rem 2rem;
+  border: none;
+  border-radius: 8px;
+  text-transform: capitalize;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+}
+.button-area button:disabled {
+  background: rgb(192, 189, 187);
+
+}
+
+:root {
+  --primary-blue: rgba(0, 74, 173, 1);
+  --grey-bg: rgb(248, 249, 250);
+}
+
+@font-face {
+  font-family: "Porcelain";
+  src: local("Porcelain"), url(./assets/Porcelain.otf) format("opentype");
+}
+
+.pageHeading{
+  font-family: 'Porcelain' !important;
+}
+
+.form-group{
+    padding: 5px 0px;
+}
+
+.ptr{
+  cursor: pointer;
+}

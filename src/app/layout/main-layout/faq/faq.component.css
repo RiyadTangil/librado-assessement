@@ -1,0 +1,82 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+/* *{
+} */
+
+.main-page{
+  padding: 1rem 2rem;
+  background-color: rgba(248, 249, 250, 1);
+  height: 100vh;
+}
+
+.banner{
+  width: 100%;
+}
+
+.banner .header{
+  top:0;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.aligns{
+  display: inline-block;
+}
+
+.banner .header .text1{
+  color: gray;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.banner .header .text2{
+  font-size: 14px;
+  float: right;
+
+}
+
+.banner .header .text2 .righty{
+  margin: 0 1rem;
+  display: inline-block;
+}
+
+input{
+  border-radius: 12px;
+}
+
+.banner .header .text2 .righty p{
+  margin: 0;
+  color: gray;
+  cursor: pointer;
+}
+
+.content{
+  width: 100%;
+  margin-top: 3rem;
+  padding: 1rem 2.5rem;
+  background: white;
+  border-radius: 15px;
+}
+
+.content .heading { 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--primary-blue);
+}
+
+.content .faq-container{
+    margin: 2rem 0rem;
+    padding: 1rem;
+     display: flex;
+     flex-direction: column;
+}
+
+
+.content .faq-container ul li .title{
+    font-weight: 600;
+    font-size: 1rem;
+}

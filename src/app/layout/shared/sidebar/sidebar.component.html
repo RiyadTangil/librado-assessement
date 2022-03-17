@@ -1,0 +1,24 @@
+<div class="w-100 d-flex flex-column p-3 logo-container">
+  <div class="logo d-flex justify-content-center">
+    <img src="/assets/images/newlogo.jpeg" alt="" width="80%" height="auto">
+  </div>
+  
+  <hr />
+  <ul>
+    <li *ngFor="let path of navigationPaths" [routerLink]="path.path">
+      <div class="icon text" style="display:inline-block">
+        <i class="bi" [ngClass]="path.icon"></i>
+      </div>
+      <div style="padding: 5px;" class="text">
+        {{path.title}}
+      </div>
+    </li>
+  </ul>
+
+  <hr/>
+
+  <div class="logo-end">
+    <p>Powered By:</p>
+    <img src="/assets/images/logo.png" alt="" width="50%" height="auto">
+  </div>
+</div>
